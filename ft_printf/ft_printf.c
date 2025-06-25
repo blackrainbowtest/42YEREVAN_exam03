@@ -17,3 +17,15 @@ int	ft_putstr(char *str)
 		i += ft_putchar(str[i]);
 	return (i);
 }
+
+int	ft_putnbr(unsigned int num, int base)
+{
+	int		i = num % base;
+	char 	*base_set = "0123456789abcdef";
+	int		count = 0;
+
+	if (num / base > 0)
+		count += ft_putnbr(num / base, base);
+	count += ft_putchar(base_set[i]);
+	return (count);
+}
