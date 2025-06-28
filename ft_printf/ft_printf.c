@@ -78,7 +78,7 @@ int	ft_printf(char *str, ...)
 			else if (str[i + 1] == 'x')
 				count += ft_putnbr(va_arg(ap, unsigned int), 16);
 			else if (str[i + 1] == 's')
-				count += ft_putstr(va_arg(arg, char *));
+				count += ft_putstr(va_arg(ap, char *));
 			i++;
 		}
 		else
